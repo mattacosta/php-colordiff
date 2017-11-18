@@ -1,19 +1,19 @@
-php-colorutility
-================
+php-colordiff
+=============
 
 Implements utility functions to compute the difference between colors and to
-convert between different color models, such as [RGB] [1] and [CIELAB] [2].
+convert between different color models, such as [RGB][1] and [CIELAB][2].
 
-For more information on delta E functions, see [Color difference] [3].
+For more information on delta E functions, see [Color difference][3].
 
 ## Example
 ```php
-$color1 = array('r' => 255, 'g' => 0, 'b' => 255);  // Magenta
-$color2 = array('r' => 220, 'g' => 20, 'b' => 60);  // Crimson
+$color1 = ['r' => 255, 'g' => 0, 'b' => 255];  // Magenta
+$color2 = ['r' => 220, 'g' => 20, 'b' => 60];  // Crimson
 
-$color1 = ColorUtility::xyz2cielab(ColorUtility::rgb2xyz($color1));
-$color2 = ColorUtility::xyz2cielab(ColorUtility::rgb2xyz($color2));
-$difference = ColorUtility::deltaE2000($color1, $color2);
+$color1 = ColorDiff::xyz2cielab(ColorDiff::rgb2xyz($color1));
+$color2 = ColorDiff::xyz2cielab(ColorDiff::rgb2xyz($color2));
+$difference = ColorDiff::deltaE2000($color1, $color2);
 ```
 
 [1]: http://en.wikipedia.org/wiki/SRGB
