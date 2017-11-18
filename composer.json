@@ -1,0 +1,11 @@
+{
+    "name": "mattacosta/php-colordiff",
+    "description": "Provides functions to convert and compare colors.",
+    "homepage": "https://github.com/mattacosta/php-colordiff",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "mattacosta\\Media\\": "src/"
+        }
+    }
+}
