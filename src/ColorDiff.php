@@ -246,7 +246,7 @@ class ColorDiff {
       $dg = ((($max - $color['g']) / 6) + ($d / 2)) / $d;
       $db = ((($max - $color['b']) / 6) + ($d / 2)) / $d;
 
-      $h = ($color['r'] == $max) ? $db - $dg : ($color['g'] == $max) ? (1.0 / 3.0) + $dr - $db : (2.0 / 3.0) + $dg - $dr;
+      $h = ($color['r'] == $max) ? $db - $dg : (($color['g'] == $max) ? (1.0 / 3.0) + $dr - $db : (2.0 / 3.0) + $dg - $dr);
       if ($h < 0) {
         $h += 1;
       }
